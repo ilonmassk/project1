@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="20.0" style="-fx-background-color: #99ffcc;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/22" fx:controller="org.example.biblioteka.HelloController">
+    <Label style="-fx-font-size: 20px;" text="Библиотека" />
+
+    <HBox spacing="10">
+        <TextField fx:id="authorField" promptText="Автор" />
+        <TextField fx:id="titleField" promptText="Название" />
+        <TextField fx:id="publisherField" promptText="ID издательства" />
+        <TextField fx:id="yearField" promptText="Год" />
+        <TextField fx:id="pagesField" promptText="Страницы" />
+        <TextField fx:id="statusField" promptText="ID статуса" />
+        <Button onAction="#addBook" text="Добавить книгу" />
+    </HBox>
+
+    <HBox spacing="10">
+        <TextField fx:id="searchField" promptText="Поиск по автору" />
+        <Button onAction="#searchBooks" text="Найти" />
+    </HBox>
+
+    <ListView fx:id="booksList" />
+
+    <HBox spacing="10">
+        <TextField fx:id="returnYearField" promptText="Год издания" />
+        <TextField fx:id="overdueDaysField" promptText="Дни просрочки" />
+        <Button onAction="#calculatePenalty" text="Рассчитать штраф" />
+        <TextField fx:id="deleteBookField" promptText="Инв. номер книги" />
+        <Button onAction="#deleteBook" text="Удалить книгу" />
+    </HBox>
+
+    <Label fx:id="penaltyLabel" />
+
+</VBox>
